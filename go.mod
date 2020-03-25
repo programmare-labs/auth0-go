@@ -1,4 +1,4 @@
-module github.com/auth0-community/go-auth0
+module github.com/floatme-corp/auth0-go
 
 require (
 	github.com/stretchr/testify v1.4.0

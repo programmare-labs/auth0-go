@@ -54,6 +54,15 @@ func NewConfiguration(provider SecretProvider, audience []string, issuer string,
 	}
 }
 
+// NewConfigurationSubject creates a configuration for server with subject for validation
+func NewConfigurationSubject(provider SecretProvider, audience []string, issuer string, subject string, method jose.SignatureAlgorithm) Configuration {
+	return Configuration{
+		secretProvider: provider,
+		expectedClaims: jwt.Expected{Issuer: issuer, Audience: audience, Subject: subject},
+		signIn:         method,
+	}
+}
+
 // NewConfigurationTrustProvider creates a configuration for server with no enforcement for token sig alg type, instead trust provider
 func NewConfigurationTrustProvider(provider SecretProvider, audience []string, issuer string) Configuration {
 	return Configuration{

@@ -3,9 +3,9 @@ package main
 import (
 	"time"
 
-	"github.com/auth0-community/go-auth0"
 	cors "github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/programmare-labs/go-auth0"
 	"gopkg.in/square/go-jose.v2"
 
 	"crypto/x509"
